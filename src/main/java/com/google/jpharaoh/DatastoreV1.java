@@ -211,13 +211,13 @@ public class DatastoreV1 {
    * <p>Testing has found that a batch of 200 entities will generally finish within the timeout even
    * in adverse conditions.
    */
-  @VisibleForTesting static final int DATASTORE_BATCH_UPDATE_ENTITIES_START = 200;
+  @VisibleForTesting static final int DATASTORE_BATCH_UPDATE_ENTITIES_START = 20;
 
   /**
    * When choosing the number of updates in a single RPC, never exceed the maximum allowed by the
    * API.
    */
-  @VisibleForTesting static final int DATASTORE_BATCH_UPDATE_ENTITIES_LIMIT = 500;
+  @VisibleForTesting static final int DATASTORE_BATCH_UPDATE_ENTITIES_LIMIT = 50;
 
   /**
    * When choosing the number of updates in a single RPC, do not go below this value. The actual
