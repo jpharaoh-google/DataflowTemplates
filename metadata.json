@@ -1,0 +1,32 @@
+{
+  "description": "Delete all entities from Datastore.",
+  "name": "Datastore delete all entities",
+  "parameters": [
+    {
+      "regexes": [
+        "^([a-z0-9\\.]+:)?[a-z0-9][a-z0-9-]{5,29}$"
+      ],
+      "name": "datastoreDeleteProjectId",
+      "helpText": "Project ID to delete entities from",
+      "label": "Project ID"
+    },
+    {
+      "regexes": [
+        "[0-9A-Za-z._-]{0,100}"
+      ],
+      "name": "datastoreDeleteNamespace",
+      "helpText": "Namespace to delete entities from. Leave empty for default namespace",
+      "label": "Namespace",
+      "isOptional": true
+    },
+    {
+      "regexes": [
+        "^.+$"
+      ],
+      "name": "datastoreDeleteQuery",
+      "helpText": "Query to find entities to delete, eg: SELECT __key__ FROM Kind",
+      "label": "Query"
+    }
+  ]
+}
+
